@@ -6,12 +6,12 @@ app.use(cors());
 app.use(express.json());
 
 // Начален маршрут
-app.get('/', (req, res) => {
+app.get(`${process.env.REACT_APP_API_URL}`, (req, res) => {
   res.send('Здравей! Това е началната страница на backend-а!');
 });
 
 // Health check маршрутa
-app.get('/api/health', (req, res) => {
+app.get(`${process.env.REACT_APP_API_URL}/api/health`, (req, res) => {
   res.json({ status: 'Backend is working!' });
 });
 
