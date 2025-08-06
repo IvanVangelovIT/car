@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.send('Здравей! Това е началната страница на backend-а!');
 });
 
-// Health check маршрут
+// Health check маршрутa
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Backend is working!' });
 });
